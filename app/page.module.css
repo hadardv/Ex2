@@ -1,0 +1,143 @@
+/* Main container with max width and padding */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  min-height: 100vh;
+}
+
+/* Header with title and settings button */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+/* Page title styling */
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 16px;
+}
+
+/* Subtitle text */
+.subtitle {
+  font-size: 18px;
+  color: #6e6e73;
+  margin: 0;
+}
+
+/* Settings button */
+.settingsButton {
+  font-size: 28px;
+  width: 56px;
+  height: 56px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.settingsButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.settingsButton:active {
+  transform: translateY(0);
+}
+
+/* Responsive grid layout */
+/* Desktop: 3 columns */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Loading state styling */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #6e6e73;
+  padding: 60px 20px;
+}
+
+/* Error state styling */
+.error {
+  text-align: center;
+  font-size: 16px;
+  color: #d32f2f;
+  background-color: #ffebee;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Empty state styling */
+.empty {
+  text-align: center;
+  font-size: 18px;
+  color: #6e6e73;
+  padding: 60px 20px;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 640px) {
+  .container {
+    padding: 32px 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 32px;
+  }
+
+  .settingsButton {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    align-self: flex-end;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .loading,
+  .empty {
+    font-size: 16px;
+    padding: 40px 20px;
+  }
+
+  .error {
+    font-size: 14px;
+  }
+}
+
