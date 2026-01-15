@@ -1,5 +1,5 @@
-# YUV.AI Trends
-
+# YUV.AI Trends MVP
+https://ex2-navy.vercel.app/
 A web application that displays trending AI and Machine Learning repositories from GitHub with AI-powered summarization capabilities.
 
 ## Project Description
@@ -182,30 +182,6 @@ Groq provides free, fast LLM API access with OpenAI-compatible endpoints, making
 ### Why In-Memory Caching?
 
 GitHub's API has rate limits (60 requests/hour for unauthenticated users). Caching responses for 10 minutes reduces API calls while keeping data relatively fresh.
-
-## Development Notes
-
-- The application uses Next.js App Router (not Pages Router)
-- All components are functional components using React hooks
-- TypeScript ensures type safety throughout the codebase
-- Comments explain the "why" behind implementation choices (as per assignment requirements)
-
-## Building for Production
-
-To create a production build:
-
-```bash
-npm run build
-npm start
-```
-
-The application will be optimized for deployment.
-
-## Browser Compatibility
-
-- Modern browsers with ES6+ support
-- localStorage support required
-- Tested on Chrome, Safari, Firefox, and Edge
 
 ## License
 
